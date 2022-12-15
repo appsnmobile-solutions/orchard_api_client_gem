@@ -66,4 +66,14 @@ RSpec.describe Orchard do
 
     @orchard_api_client.check_transaction_status(transaction_payload)
   end
+
+  it "should check the balance of an account" do
+    transaction_payload = {
+      service_id: ENV["CLIENT_ID"],
+      trans_type: "BLC",
+      ts: Time.now.strftime("%Y-%m-%d %H:%M:%S")
+    }
+
+    @orchard_api_client.check_wallet_balance(transaction_payload)
+  end
 end
