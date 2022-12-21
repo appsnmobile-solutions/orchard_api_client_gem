@@ -8,6 +8,9 @@ module Orchard
       SERVICE_LOOKUP_REQUEST_ENDPOINT = "/get_service_lookup_req"
       CHECK_TRANSACTION_STATUS_ENDPOINT = "/checkTransaction"
       CHECK_WALLET_BALANCE = "/check_wallet_balance"
+      CUSTOMER_DEBIT_INFORMATION_ENDPOINT = "/get_cust_recur_debit_info"
+      CUSTOMER_DEBIT_ACTIVATION_ENDPOINT = "/cust_recur_debit_activation"
+      CUSTOMER_DEBIT_DEACTIVATION_ENDPOINT = "/cancel_cust_auto_debit_subscrip"
     end
   end
 end

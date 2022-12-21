@@ -21,14 +21,18 @@ module Orchard
       end
 
       def make_request(method)
-        response = @connection.send(method) do |request|
+        @response = @connection.send(method) do |request|
           request.url @endpoint
           request.options.timeout = @timeout
-          request.body = @payload.to_json
           request["Authorization"] = "#{@client_token}:#{compute_signature}"
+          if method.eql?(:get)
+            request.params = @payload
+          else
+            request.body = @payload.to_json
+          end
         end
 
-        JSON.parse(response.body)
+        JSON.parse(@response.body)
       rescue StandardError => e
         error_response(e)
       end
@@ -36,7 +40,9 @@ module Orchard
       def error_response(error)
         {
           "res_code" => "999",
-          "res_desc" => error.message
+          "res_desc" => @response.reason_phrase,
+          "error_message" => error.message,
+          "error_class" => error.class
         }
       end
     end

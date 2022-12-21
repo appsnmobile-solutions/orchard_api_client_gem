@@ -29,6 +29,18 @@ module Orchard
       Orchard::API::CheckWalletBalance.call(payload_with_client_data(payload), request_configurations)
     end
 
+    def customer_debit_information(payload, request_configurations = {})
+      Orchard::API::CustomerDebitInformation.call(payload_with_client_data(payload), request_configurations)
+    end
+
+    def customer_debit_activation(payload, request_configurations = {})
+      Orchard::API::CustomerDebitActivation.call(payload_with_client_data(payload), request_configurations)
+    end
+
+    def customer_debit_deactivation(payload, request_configurations = {})
+      Orchard::API::CustomerDebitDeactivation.call(payload_with_client_data(payload), request_configurations)
+    end
+
     private
 
     def create_connection
