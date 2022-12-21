@@ -40,7 +40,7 @@ module Orchard
       def error_response(error)
         {
           "res_code" => "999",
-          "res_desc" => @response.reason_phrase,
+          "res_desc" => @response&.reason_phrase,
           "error_message" => error.message,
           "error_class" => error.class
         }
