@@ -64,5 +64,5 @@ If bundler is not being used to manage dependencies, install the gem by executin
     service_id: ENV['SERVICE_ID']
   }
 
-  response = client.send_sms(sms_payload, request_configuration)
+  response = client.send_sms(sms_payload, request_configurations)
 ```

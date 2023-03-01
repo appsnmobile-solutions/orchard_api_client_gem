@@ -13,5 +13,6 @@ require_relative "orchard/api/check_wallet_balance"
 require_relative "orchard/api/customer_debit_information"
 require_relative "orchard/api/customer_debit_activation"
 require_relative "orchard/api/customer_debit_deactivation"
+require_relative "orchard/api/send_third_party_request"
 
 require_relative "orchard/api_client"

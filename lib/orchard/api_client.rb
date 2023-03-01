@@ -41,6 +41,10 @@ module Orchard
       Orchard::API::CustomerDebitDeactivation.call(payload_with_client_data(payload), request_configurations)
     end
 
+    def send_third_party_request(payload, request_configurations = {})
+      Orchard::API::SendThirdPartyRequest.call(payload_with_client_data(payload), request_configurations)
+    end
+
     private
 
     def create_connection
