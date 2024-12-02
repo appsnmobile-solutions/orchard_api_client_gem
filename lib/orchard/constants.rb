@@ -5,7 +5,8 @@ module Orchard
     module Constants
       SEND_PAYMENT_REQUEST_ENDPOINT = "/sendRequest"
       SEND_SMS_ENDPOINT = "/sendSms"
-      SERVICE_LOOKUP_REQUEST_ENDPOINT = "/get_service_lookup_req"
+      # SERVICE_LOOKUP_REQUEST_ENDPOINT = "/get_service_lookup_req"
+      SERVICE_LOOKUP_REQUEST_ENDPOINT = "/sendRequest"
       CHECK_TRANSACTION_STATUS_ENDPOINT = "/checkTransaction"
       CHECK_WALLET_BALANCE = "/check_wallet_balance"
       CUSTOMER_DEBIT_INFORMATION_ENDPOINT = "/get_cust_recur_debit_info"
