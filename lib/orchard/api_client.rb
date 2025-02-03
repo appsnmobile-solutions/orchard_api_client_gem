@@ -25,6 +25,10 @@ module Orchard
       Orchard::API::CheckTransactionStatus.call(payload_with_client_data(payload), request_configurations)
     end
 
+    def resend_callback(payload, request_configurations = {})
+      Orchard::API::ResendCallback.call(payload_with_client_data(payload), request_configurations)
+    end
+
     def check_wallet_balance(payload, request_configurations = {})
       Orchard::API::CheckWalletBalance.call(payload_with_client_data(payload), request_configurations)
     end

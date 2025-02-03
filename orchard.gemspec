@@ -5,8 +5,8 @@ require_relative "lib/orchard/version"
 Gem::Specification.new do |spec|
   spec.name = "orchard-api-client-anm"
   spec.version = Orchard::VERSION
-  spec.authors = ["Sydney Dapilah"]
-  spec.email = ["sydney@appsnmobilesolutions.com"]
+  spec.authors = ["Sydney Dapilah", "Yesuko Tagbor"]
+  spec.email = ["sydney@appsnmobilesolutions.com", "yesuko@appsnmobilesolutions.com"]
 
   spec.summary = "Orchard API client"
   spec.description = "Orchard API client"

@@ -5,7 +5,7 @@ module Orchard
     class ServiceLookupRequest < Orchard::API::Base
       def call
         @endpoint = Orchard::API::Constants::SERVICE_LOOKUP_REQUEST_ENDPOINT
-        make_request(:get)
+        make_request(:post)
       end
     end
   end
