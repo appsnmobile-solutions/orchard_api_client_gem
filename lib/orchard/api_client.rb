@@ -25,10 +25,6 @@ module Orchard
       Orchard::API::CheckTransactionStatus.call(payload_with_client_data(payload), request_configurations)
     end
 
-    def resend_callback(payload, request_configurations = {})
-      Orchard::API::ResendCallback.call(payload_with_client_data(payload), request_configurations)
-    end
-
     def check_wallet_balance(payload, request_configurations = {})
       Orchard::API::CheckWalletBalance.call(payload_with_client_data(payload), request_configurations)
     end
@@ -43,6 +39,10 @@ module Orchard
 
     def customer_debit_deactivation(payload, request_configurations = {})
       Orchard::API::CustomerDebitDeactivation.call(payload_with_client_data(payload), request_configurations)
+    end
+
+    def debit_or_credit_customer_wallet(payload, request_configurations = {})
+      Orchard::API::DebitOrCreditCustomerWallet.call(payload_with_client_data(payload), request_configurations)
     end
 
     def send_third_party_request(payload, request_configurations = {})
